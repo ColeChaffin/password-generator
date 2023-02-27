@@ -5,12 +5,18 @@ function generatePassword(){
 
   var passwordLength=parseInt(window.prompt("enter desired password length"))
 if(passwordLength===null || isNaN(passwordLength)){
-  //add less than 8 greater than 8 empty string 
+  
   alert("must enter a valid password length")
   return "please try again"
 }
   console.log(passwordLength)
- //create if statments for less than 8 greater than 128 for a null value and empty string
+  
+ if (passwordLength < 8){
+  return false
+ }
+ if (passwordLength > 128){
+  return false
+ }
   var yesLower=confirm("would you like lowercase letters")
   var characterstring=""
   if(yesLower){
