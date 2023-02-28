@@ -1,6 +1,5 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
-// var numbers=[0,1,2,3,4,5,6,7,8,9]
+
 function generatePassword(){
 
   var passwordLength=parseInt(window.prompt("enter desired password length"))
@@ -44,7 +43,6 @@ passstring +=digit
   }
   return passstring
 }
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -53,5 +51,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
